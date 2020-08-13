@@ -18,20 +18,22 @@ export default {
   ],
 };
 
-export const FullExample = () => ({
+export const FullExample = (args) => ({
   component: PageListComponent,
   template: `<div style="height:100vh"><cms-page-list [renderSiteUrl]="renderSiteUrl" [resourceType]="resourceType" [resourceID]="resourceID" [editorOptions]="editorOptions"></cms-page-list></div>`,
-  props: {
-    renderSiteUrl: 'https://www.my-awesome-website.com',
-    resourceType: 'Suppliers',
-    resourceID: '41106',
-    editorOptions: {
-      content_css: [
-        // 'https://piasstorageprod.azureedge.net/buyerweb/styles.07d24b25eb6a60350a70.css',
-        'https://mgrstoragetest.azureedge.net/buyerweb/styles.e94215343d3493186ae1.css',
-        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
-        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css',
-      ],
-    },
-  },
+  props: args,
 });
+
+FullExample.args = {
+  renderSiteUrl: 'https://www.my-awesome-website.com',
+  resourceType: 'Suppliers',
+  resourceID: '41106',
+  editorOptions: {
+    content_css: [
+      // 'https://piasstorageprod.azureedge.net/buyerweb/styles.07d24b25eb6a60350a70.css',
+      'https://mgrstoragetest.azureedge.net/buyerweb/styles.e94215343d3493186ae1.css',
+      'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
+      'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css',
+    ],
+  },
+};

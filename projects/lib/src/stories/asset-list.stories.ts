@@ -23,8 +23,9 @@ export default {
   ],
 };
 
-export const FullExample = () => ({
+export const FullExample = (args) => ({
   component: AssetListComponent,
   template: `<cms-asset-list></cms-asset-list>`,
-  props: {},
+  props: args,
 });
+FullExample.args = {};
